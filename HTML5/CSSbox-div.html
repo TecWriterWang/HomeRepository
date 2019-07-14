@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOX-盒子模型-div</title>
+    <style type="text/css">
+        .div1{
+            border:2px solid red;/*内边框，依次是宽，边框样式，边框颜色*/
+            border-radius: 25px;
+            box-shadow: 10px 10px 5px #ffd317;
+            margin-top: 100px;
+            margin-right: 200px;
+            margin-left: 200px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+        .div2{
+            height: 500px;
+            width: 900px;
+            border:2px solid #5bff36;/*内边框，依次是宽，边框样式，边框颜色*/
+            border-radius: 20px;/*盒子四个角弯曲度*/
+            box-shadow: 10px 10px 5px 3px #ffd317;/*盒子阴影*/
+            border-image: url("Picture/盒子div.jpg") 30 30 round;/*边框图片*/
+            background-image: url("Picture/盒子div.jpg");/*背景图片*/
+            margin-right: 300px;
+            margin-left: 300px;
+            margin-bottom: 100px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="div1">这是一个盒子模型-div <br><img src="Picture/盒子div.jpg" alt="盒子"></div>
+<div class="div2"></div>
+
+
+<div style="background-color: #00ff0f;text-align: center">
+    <h2>div标签必须占用一行，且后面不能显示别的元素，div标签没用任何语意，只为了对页面进行布局</h2>
+</div>
+<br />
+<span style="background-color: #2df0ff;font-size: 20px;text-align: center">
+    span标签是内联元素，只会占用标签自身大小一行,span标签也没有实际语意，通过span可以对没有样式的内容设置样式，
+    如果span标签内嵌套别的标签，则span标签的属性不能显示。
+</span>
+
+
+
+</body>
+</html>

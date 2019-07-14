@@ -1,0 +1,79 @@
+<!DOCTYPE html><!--申明IDE编写的是HTML文件-->
+<!--注释整行 "Ctrl+/""-->
+<!--注释部分 "Ctrl+Shift+/"-->
+
+<html lang="en"><!--文档中html开始，并将语言设置为英语，也可设置为“zh”表示中文。-->
+<head><!--提供有关文档内容标记和信息-->
+    <meta charset="UTF-8"><!--设置网页字符编码-->
+    <title>The First HTML</title><!--设置标题内容-->
+</head>
+<body> <!--/下面写网页主体内容-->
+练习
+<br><!--br 元素表示行-->
+111
+<br>
+<h1>练习</h1><!--h元素 改变字体大小,会自动换行-->
+<em>练习</em><!--em元素 将字体变斜体--><br>
+<b>练习</b><!--b元素 加粗字体--><br>
+<u>练习习</u><!--u元素 给字体添加下划线--><br>
+<s>练习习</s><!--s元素 给字体添加删除线--><br>
+<a></a><!--a元素 表示超链接 target 表示链接跳转方式-->
+
+<br>
+<a href="BasicOFHTML.html" target="_blank">_blank链接</a><!--在一个新的窗口打开该链接--><br>
+<a href="https://space.bilibili.com/" target="_parent" >_parent链接</a><!--在当前窗口跳转到该链接--><br>
+<a href="https://space.bilibili.com/" target="_self" >_self链接</a><!--在当前窗口跳转到该链接--><br>
+<a href="https://space.bilibili.com/" target="_top" >_top链接</a><!--在当前窗口跳转到该链接--><br>
+
+表格三要素<!--<table>代表表格 <tr>代表行 <td>单元格内容 -->
+<!--<th> 代表表格标题行,会自动加粗-->
+<!--<thead>代表表格标题-->
+<!--<tbody>代表表格内容-->
+<!--<<tfoot代表表格表脚-->
+<!--<td colspan="2">合并两个列-->
+<table border="1 px"><!--border元素 添加表格的边框-->
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="2">晚上</td>
+        <td>12</td>
+        <td>male</td>
+        <th>性别</th>
+
+    </tr>
+    <tr>
+
+        <td colspan="2">12</td>合并列
+
+        <th>性别</th>
+
+    </tr>
+    <tr>
+        <td>晚上</td>
+        <td>12</td>
+        <td>male</td>
+        <th>性别</th>
+
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>性别</td>
+        <th>性别</th>
+
+    </tr>
+    </tfoot>
+</table>
+<br>
+</body>
+</html>

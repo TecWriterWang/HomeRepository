@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitCMD</title>
+    <style type="text/css">
+        .class1{
+            background-color: #fad6ee;
+        }
+        .div{
+            text-align: center;
+        }
+        .img {
+            margin-top: 5px; /*上边距*/
+            margin-bottom: 5px; /*下边距*/
+            width: 1080px;
+            height: 700px;
+        }
+        html:hover .img{
+            /*此处本来是img：hover{}但是该操作无法让缩小后的动画不受鼠标控制。*/
+            /*替换成html：hover .img 表示该鼠标悬停img后，在html任何部位都起作用，*/
+            animation-name: Git;
+            animation-delay: 500ms;
+            animation-duration: 1s;
+            /*animation-iteration-count: 1;*/
+            animation-fill-mode: forwards;/*使动画保持到最后一帧*/
+        }
+        @keyframes Git{/*可以将animation标签用transition替换，将此段代码直接放在hover中*/
+            to{
+                width: 100px;
+                height: 100px;
+                margin-top: 0px;
+            }
+
+        }
+        p{
+            font-family: 微软雅黑;
+            font-size: 60px;
+            text-shadow: 1px 1px 2px #5bff36;/*字体阴影：水平，竖直，模糊，颜色*/
+            opacity:1;/*透明度0-1之间的数*/
+        }
+        html:hover p{
+            transition-delay: 1s;
+            transition-duration: 1s;
+            font-family: 微软雅黑;
+            font-size: 10px;
+            text-shadow: 1px 1px 2px #5bff36;/*字体阴影：水平，竖直，模糊，颜色*/
+            opacity:0;/*透明度0-1之间的数*/
+        }
+    </style>
+</head>
+<body class="class1">
+<div class="div">
+    <img src="Picture/Gitcmd.jpg" class="img" alt="Git Shortcut">
+    <p>This is common command for Git</p>
+</div>
+</body>
+</html>

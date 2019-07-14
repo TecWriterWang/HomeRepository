@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5</title>
+</head>
+<body>
+列表
+<ol><!--有序列表-->
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ol>
+<ol reversed><!--倒序-->
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ol>
+<ol type="I"><!--增加序号-->
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ol>
+<ul><!--无序列表-->
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+
+表单元素form <br><br>
+
+<form>
+    Input <br><br>
+    <ol>
+        Input single line text <br>
+        <input type="text" value="点击输入"><br>add a input box with the background text can delete
+        <br><br>
+        Input many lines text <br>
+        <textarea rows="2" cols="10">aaaaaaaaa</textarea><br /><br />
+        <input type="text" placeholder="点击输入"><br> add a input box with the background text can't edit
+        <br><br>
+        <input type="text" placeholder="点击输入" size="45"><br>the box size edit and box's width add
+        <br><br>
+        <input type="text" placeholder="www" maxlength="6"><br>add a input box with the background text can't edit and input text length limit
+        <br><br>
+        <input type="text" value="点击输入" readonly><br>add a input box with the background text can't edit
+        <br><br>
+        <input type="password" placeholder="input Password"><br>Password can't show
+        <br><br>
+    </ol>
+
+    Click Button <br>
+    <ol>
+        <input type="button" value="确认1">
+        <button>确认2</button>
+        <input type="submit" value="确认3"><br>three diff buttons use <br>Function: Button>input button> input submit
+    </ol>
+
+    Slip mode <br>
+    <ol>
+        Range:add a slip mode,value is position of start <br>
+        <input type="range" min="0" max="100" step="5" value="1"><br><br>
+        Number:add a click mode <br>
+        <input type="number" min="0" max="100" step="5" value="1"><br><br>
+    </ol>
+
+    Checkbox(复选框):Please choice one <br>
+    <ol>
+        <input type="checkbox">是<input type="checkbox">否 <br>add a click choice<br><br>
+        多个选项和只能选其一 <br>
+        <input type="radio" name="a" checked>1<input type="radio"name="a">2<input type="radio"name="a">3
+    </ol>
+
+    下拉式选项卡
+    <ol>
+        下拉框选项卡1:不可以再次编辑，只能选择给出选项 <br>
+        what is your choice?
+        <select>
+            <option>bread</option>
+            <option>coffe</option>
+            <option>milk</option>
+        </select>
+        <br><br>
+        下拉框选项卡2:可以再次编辑添加选项 <br>
+        <input type="text" list="datalist1">
+        <datalist id="datalist1">
+            <option>bread</option>
+            <option>coffe</option>
+            <option>milk</option>
+        </datalist>
+    </ol>
+    <br><br>
+    import picture <br>
+    <input type="image" src="Picture/HTML.jpg" width="80px">
+    <br><br>
+    import file <br>
+    <input type="file" ><br><br>
+    import date <br>
+    <input type="date">
+</form>
+<br><br>
+<h2 align="center">若要使对象变换位置，需要先将其处理的对象放在一个块中,在这个块中可以直接变化，也可c使用ss变化</h2>
+image直接上传picture <br>
+<img src="Picture/HTML.jpg" width="128px"><br><br>
+import video <br>
+<video src="Video/test.mp4" height="300px" controls autoplay></video>
+<br>
+<audio src="Audio/OMFG%20-%20Hello.mp3" controls></audio>
+
+</body>
+</html>

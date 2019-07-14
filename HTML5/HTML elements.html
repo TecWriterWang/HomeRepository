@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta元素-->
+    <!--1.可以设置网页字符集-->
+    <meta charset="UTF-8" />
+    <!--2.设置网页关键字：-->
+    <meta name="keyboard" content="HTML5,js" />
+    <!--3.设置网页的描述内容:-->
+    <meta name="description" content="learn HTML" />
+    <!--4.刷新网页重新定向：-->
+    <!--<meta http-equiv="refresh" content="3;url=http://www.google.com" />-->
+    <title>All elements statistic</title>
+    <style>
+        h3:hover{
+            color: #3723ff;
+        }
+    </style>
+</head>
+<body>
+<p align="center"><a href="#bottom">跳转到底部</a></p>
+<h1>基本元素</h1>
+<hr />
+<h2>HTML不会识别空格（多个空格只会当做一个处理）以及换行必须使用br标签</h2>
+<h3>h 表示网页中的标题,且自动换行,从h1->h6，一般标题只到h3且一个页面中只有一个h1标签</h3>
+<h3>p 表示网页中的段落，段落中内容不会换行</h3>
+<h3>b 表示加粗</h3>
+<h3>i 表示斜体</h3>
+<h3>s 表示删除线</h3>
+<h3>(hr /) 表示水平线，使用该标签可以在网页中打印一个水平线，用于分隔页面</h3>
+<h3>(br /) 表示换行</h3>
+<h3>ol 表示有序列表，ul 无序列表，li 属性表示列表的行</h3>
+<h3>(&字符简写;) 实体/转义字符,可以表示一些不能表示的数学符号，例如大于号或小于号</h3>
+<h3>img 表示图片，可以用来向页面中 引入一张外部的图片。 – src • 指向一个外部的图片的路径。 – alt • 图片的描述（仅当图片不能显示时才会显示），可以在标签内修改图片大小</h3>
+
+<h3>a 表示超链接 href：指向一个链接地址；target：设置打开目标页面的位置；_blank：在新窗口打开目标页面； _self： 当前窗口打开目标页面</h3>
+<a href="https://github.com/TecWriterWang?tab=repositories" target=_blank>
+a标签表示可超链接，点击可快速跳转到链接页面，链接必须为http开头，a标签有多个属性,不会自动换行,可将url替换为#，表示自动跳转</a><br>
+
+<h3>table 表示表格，有多个属性, th表示表头 tr表示行 td表示表格单元</h3>
+<a href="BasicOFHTML.html">这是表格要素</a>
+<table border="1" align="center"><!--border表示表格边框宽度-->
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<h3>small 表示小字，cite 表示引用，q 表示短引用， blockquote 表示长引用</h3>
+<ol>
+    <li><small>这是小标签</small></li>
+    <li><cite>这是引用标签</cite></li>
+    <li><q>这是短引用标签</q></li>
+    <li><blockquote>这是长引用标签</blockquote></li>
+</ol>
+<h3>em 和 strong 都表示重要内容 前者一般显示为斜体 后者显示为加粗</h3>
+<h3>sup 表示上标 sub表示下标</h3>
+<ol>
+    2 <sup>10</sup>=1024
+    <br />
+    H <sub>2</sub>O
+</ol>
+
+<h3>ins 表示插入标签，一般表现为字体下划线，del 表示删除 一般表示为删除线例如价格打折</h3>
+<ol>
+    <ins>原价100</ins>
+    <br />
+    <del>现价80</del>
+</ol>
+<h3>code 表示代码，pre表示域标签，一般结合使用表示代码块</h3>
+<pre>
+    <code>
+        alert("hello")
+        alert("world")
+    </code>
+</pre>
+<hr />
+
+
+<h3>video 标签表示视频,可以向网页插入视频播放窗口；video 元素允许多个 source 元素。source 元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式：
+<ol>
+    <li>src：视频来源地址</li>
+    <li>controls：属性提供播放器的一些控件</li>
+    <li>autoplay：自动播放视频</li>
+    <li>loop：循环播放视频</li>
+    <li>preload：加载页面时预备播放视频，出现autoplay自动忽略此属性</li>
+</ol>
+</h3>
+<p align="center"><video src="Video/test.mp4" height="240" controls="controls">
+    <source src="movie.ogg" type="video/ogg">
+    <source src="movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video></p>
+
+<h3>audio 表示音频标签，属性和video标签相似</h3>
+<p align="center"><audio src="Audio/OMFG%20-%20Hello.mp3" controls="controls"></audio></p>
+
+<h3>列表</h3>
+ol 标签表示有序列表,自动编号，会自动换行 <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ol>
+
+ul 标签表示无序，不会自动编号 <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<h2>表单元素</h2>
+form 标签表示表单元素<form action="1">
+    <br>input 标签表示输入框,可以进行输入,input有多个属性可使用
+    <ol>
+        <li>type属性可以设置输入的类型</li>
+    </ol>
+    <br>button 标签表示按钮，按钮可以点击
+    <ol>
+        <input type="text" value="222"><br>
+        <input type="text" placeholder="222">
+        <button id="bottom">确认</button>
+    </ol>
+</form>
+<p align="center"><a href="#">跳转到顶部</a></p>
+<p align="center"><a href="mailto:hnlgwanghao@163.com ">联系我</a></p>
+
+
+</body>
+</html>

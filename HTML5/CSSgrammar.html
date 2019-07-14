@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Grammar</title>
+    <style type="text/css">
+        h3{/*元素选择器：根据标签名直接选择*/
+            font-size: 30px;
+            color: #ffd317;
+        }
+        /*h3 , #id1 , .class3{*/
+            /*并集选择器：多个选择器可以同时选择，语法：元素+空格+，*/
+        /*}*/
+        /**{*/
+            /*!*表示选中所有元素*!*/
+        /*}*/
+        a.class1{/*交集选择器：外围标签.属性标签    只适用于有class选择器*/
+            font-size: 20px;
+            color: red;
+        }
+
+        .class2{/*类型选择器：.类型名
+        可以是不同标签的相同类型，表示一类*/
+            font-size: 20px;
+            color: #ff2cc5;
+        }
+        #id1{ /*id选择器：#+id名
+        根据id选择,id属性只能专一（一个id名在HTML中只能出现一次），只能对一个内容使用，唯一标识*/
+            font-size: 20px;
+            color: #2df0ff;
+        }
+        [href]{/*根据标签的属性选择*/
+            font-size: 20px;
+            color: #ffad2a;
+        }
+        ol li{/*后代元素选择器：语法：祖先元素+空格+后代元素
+        调整指定元素中的指定所有后代元素（包括子元素以及更小的后代）样式*/
+            background-color: cadetblue;
+        }
+        ol > #son{/*子元素选择器：语法：指定父元素+空格+>+空格+子元素
+        只选中指定元素的指定子元素，少用*/
+            background-color: #ffd317;
+
+        }
+        h3:hover{/*其他选择器动作,鼠标移动到此处后发生变化*/
+            font-size: 50px;
+            color: #ffad2a;
+        }
+        /*伪类：表示一种标签元素的状态。
+        语法：标签名+:+状态
+        (hover（鼠标移入状态）、
+        link（正常连接（未访问过的链接））、
+        visited（访问过的链接）、
+        active（点击后被激活）)、
+        focus（获取焦点）、
+        before（指定元素前）、
+        after（指定元素后）、
+        :selection（选中的元素状态）*/
+
+        .class3{/*设置元素边框、背景（色和图片）、宽和高*/
+            color: red;
+            height: 200px;/*设置标签的宽以及高*/
+            width: 460px;
+            border: 3px solid #00ff0f;/*为元素设置边框,可以将边框颜色，边框类型以及宽度写一起*/
+            border-bottom: 3px inset blue;
+            border-radius: 30px / 30px;/*边框添加圆角 左右边距离/上下边距离*/
+            background: #af74ff;/*为元素添加背景色*/
+            background-image: url("Picture/Gitcmd.jpg");/*添加背景图案*/
+        }
+        .class4{/*文本对齐方式*/
+            text-align: center;/*对齐方式*/
+            /*letter-spacing: 1px;!*每个字符间距*!*/
+            /*word-spacing: 100px;!*每个单词间间距*!*/
+            line-height: 15px;/*行高*/
+            text-indent: 50px;/*文本缩进*/
+            text-decoration: underline;/*下划线*/
+            text-transform: capitalize;/*单词大小写*/
+            font-family: "微软雅黑";/*文本字体*/
+            font-size: 20px;/*文本字体大小*/
+            font-style: oblique;/*字体样式，倾斜或者不变等等*/
+            text-shadow: 10px 10px 1px red;/*字体阴影(水平偏移，竖直偏移，模糊程度，颜色)*/
+        }
+        /*文本过度效果,不会动，鼠标悬停后会一直保持状态*/
+        .class5{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+        .class5:hover{
+            width: 200px;
+            height: 200px;
+            background-color: #00ff0f;
+            font-size: 50px;
+            transition-delay: 1ms;/*鼠标移动到该处，并在该延迟200ms（过渡时间）后进行操作*/
+            transition-duration: 1s;/*鼠标移动到该处在1s之内完成操作*/
+            /*transition-property: background-color;!*选择某个属性在过渡时间内完成操作*!*/
+            transition-timing-function:ease;/*贝塞尔曲线控制操作完成速度（linear线性速度不变、ease由慢倒快）*/
+        }
+        /*动画过渡效果,属性和文本基本相似，鼠标悬停后后变回原来的大小*/
+        .class6{/*初始大小*/
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+        .class6:hover{
+            animation-duration: 1s;
+            animation-delay:1ms;
+            animation-name: 动画;
+            animation-iteration-count:infinite;
+            /*动画循坏次数:infinite(无限次)、initial(一次)，也可以是具体的数字*/
+            animation-direction: alternate;
+            /*变大后再反向变回去,具体放大尺寸由关键帧决定*/
+        }
+        @keyframes 动画 {/*描述动画的关键帧*/
+            from{/*从新的尺寸开始变化*/
+                width: 130px;
+                height: 130px;
+                background-color: #0306ff;
+            }
+            60%{/*中间的某个尺寸*/
+                width: 160px;
+                height: 160px;
+                background-color: #ff000f;
+            }
+
+            to {/*变到一个尺寸开始缩小到上一from尺寸*/
+                width: 200px;
+                height: 200px;
+                background-color: #ffd317;
+            }
+        }
+        /*元素以一个点发生变换*/
+        .class7{ /*初始大小*/
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+        .class7:hover{
+            width: 200px;
+            height: 200px;
+            background-color: #fa0082;
+            transition-duration: 1s;
+            transform: rotate(-30deg);
+            /*rotate：旋转变化*/
+            /*transform: scale(1.5);*/
+            /*scale：以中心放大1.5被，与直接长宽设置尺寸有区别，也可以风分别放大x和y方向*/
+            transform-origin: top right;
+            /*修改变换的起点*/
+
+        }
+
+    </style><!--文档内嵌样式表-->
+
+    <link rel="stylesheet" type="text/css" href="Link-h4.css">
+    <!--外部样式表-->
+</head>
+
+<body>
+<h1>CSS基本元素</h1>
+
+<h2>CSS:Cascading Style Sheets(层叠样式表)，可以为所有标签设置长宽高以及其他颜色属性等等，先附加属性会被后附加的属性覆盖</h2>
+
+<h2>CSS常见几种样式</h2>
+<img src="Picture/CSSBasicGrammar.jpg" alt="CSSBasicGrammar" height="400" width="600"><br />
+
+<h2><a style="color: #ff0002;font-size: 30px">优先等级：元素内嵌样式表>文档内嵌样式表>外部样式表</a></h2>
+
+<a>使用元素内嵌样式表，即行内样式</a><br />
+<a style="font-size: 30px;color: #3723ff">行内样式表,一般不推荐使用,在行内样式中各属性之间使用分号;隔开</a>
+
+
+<h3>文档内嵌样式表，即内部样式表，可以同时为多个标签设置样式，一般将其放入head中</h3>
+<!--<style>-->
+    <!--h3{/*根据标签名选择*/-->
+        <!--font-size: 30px;-->
+        <!--color: #ffd317;-->
+    <!--}-->
+<!--</style>-->
+
+
+<h3>外部式样式表(最常用)，在同一文件内，新建一个样式.css文件,在html中时使用link标签导入样式</h3>
+<h4>使用Link标签修改h4的样式，一般将link放在head中</h4>
+<!--<link rel="stylesheet" type="text/css" href="Link-h4.css">-->
+
+
+<h2>选择器 selector,使用Style标签,仅出现在文档内嵌样式表或外部样式表</h2>
+
+<ol type="1">
+    <li>根据标签选择：style标签+标签名{}，选择所有元素style标签+*{}</li>
+    <br />
+    <li id="son">
+        根据类属性（表示一类）选择：style标签+.类型名{},可以是不同的标签 <br />
+        <a class="class1">根据类选择a</a>
+        <p class="class2">根据类选择p</p>
+    </li>
+    <li>
+        根据id选择：style标签+#id{},可以是不同的标签 <br />
+        <h3 id="id1">根据id选择h3</h3>
+    </li>
+    <li>
+        根据属性选择：style标签+[属性名]{} <br />
+        <a href="HTML elements.html" target="_blank">根据属性名选择</a>
+    </li>
+    <li>
+        其他选择：style标签+选择器+：{}
+    </li>
+
+</ol>
+
+<h2>CSS元素边框效果</h2>
+<p class="class3">设置元素边框</p>
+
+<h2>CSS文本对齐方式 </h2>
+<p class="class4">Hello HTML</p><br />
+
+<h2>CSS文本过渡效果transition</h2>
+<p class="class5">doc progress</p><br>
+
+<h2>CSS动画过渡效果animation</h2>
+<p class="class6"></p>
+
+<h2>CSS变换效果</h2>
+<p class="class7"></p>
+
+</body>
+</html>
